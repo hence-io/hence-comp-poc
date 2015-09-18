@@ -6,12 +6,64 @@
 
 <dom-module id="hence-poc">
   <template>
+    <style>
+      :host {
+        --hence-card-title-color: #f00;
+        --hence-card-cover-title-color: #0f0;
+
+        --hence-card-details: {
+        }
+      }
+    </style>
     <h1>Card Samples</h1>
 
-    <h2>Custom Cards</h2>
+    <h2>Basic</h2>
 
-    <div id="custom-cards">
-      <hence-card title="Default Card" description="This is a default card sample."></hence-card>
+    <div id="basic-cards">
+      <hence-card title="I'm Just A Title"></hence-card>
+      <hence-card title="A title..."
+                  description="And some content..."></hence-card>
+      <hence-card title="A title..."
+                  subtitle="... And Subtitle"
+                  description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
+      <hence-card title="Sample with Actions"
+                  description="With some more content... With some more content... With some more content... With some more content...">
+        <div class="actions">
+          <button>Action 1</button>
+          <button>Action 2</button>
+          <button>Action 3</button>
+        </div>
+      </hence-card>
+
+    </div>
+
+    <h2>Featured Image</h2>
+
+    <div id="image-cards">
+      <hence-card title="I'm Just A Title"
+                  image="http://lorempixel.com/250/150/nature"
+                  image-position="background"
+        ></hence-card>
+      <hence-card title="A title..."
+                  image="http://lorempixel.com/250/150/nature"
+                  subtitle="... And Subtitle"
+                  description="And some content..."></hence-card>
+      <hence-card title="A title..."
+                  subtitle="... And Subtitle"
+                  image="http://lorempixel.com/250/150/nature"
+                  image-position="center"
+                  description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
+      <hence-card title="Sample with Actions"
+                  image="http://lorempixel.com/250/150/nature"
+                  image-position="center"
+                  description="With some more content... With some more content... With some more content... With some more content...">
+        <div class="actions">
+          <button>Action 1</button>
+          <button>Action 2</button>
+          <button>Action 3</button>
+        </div>
+      </hence-card>
+
     </div>
 
     <h2>User Cards</h2>
