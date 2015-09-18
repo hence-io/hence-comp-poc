@@ -1,0 +1,86 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
+<link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
+<link rel="import" href="/bower_components/hence-product-card/dist/hence-product-card.html">
+<link rel="import" href="/bower_components/hence-event-card/dist/hence-event-card.html">
+
+<dom-module id="hence-poc">
+  <template>
+    <style>
+      :host {
+        /*--hence-card-title-color: #f00;*/
+        /*--hence-card-cover-title-color: #0f0;*/
+        --hence-card-details: {
+         }
+      }
+    </style>
+    <h1>Card Samples</h1>
+
+    <h2>Basic</h2>
+
+    <div id="basic-cards">
+      <hence-card title="I'm Just A Title"></hence-card>
+      <hence-card title="A title..."
+                  description="And some content..."></hence-card>
+      <hence-card title="A title..."
+                  subtitle="... And Subtitle"
+                  description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
+      <hence-card title="Sample with Actions"
+                  description="With some more content... With some more content... With some more content... With some more content...">
+        <div class="actions">
+          <button>Action 1</button>
+          <button>Action 2</button>
+          <button>Action 3</button>
+        </div>
+      </hence-card>
+
+    </div>
+
+    <h2>Featured Image</h2>
+
+    <div id="image-cards">
+      <hence-card title="I'm Just A Title"
+                  image="http://lorempixel.com/250/150/nature"
+                  image-position="background"
+        ></hence-card>
+      <hence-card title="A title..."
+                  image="http://lorempixel.com/250/150/nature"
+                  subtitle="... And Subtitle"
+                  description="And some content..."></hence-card>
+      <hence-card title="A title..."
+                  subtitle="... And Subtitle"
+                  image="http://lorempixel.com/250/150/nature"
+                  image-position="center"
+                  description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
+      <hence-card title="Sample with Actions"
+                  image="http://lorempixel.com/250/150/nature"
+                  image-position="center"
+                  description="With some more content... With some more content... With some more content... With some more content...">
+        <div class="actions">
+          <button>Action 1</button>
+          <button>Action 2</button>
+          <button>Action 3</button>
+        </div>
+      </hence-card>
+
+    </div>
+
+    <h2>User Cards</h2>
+
+    <div id="user-cards">
+      <hence-user-card query='{"id": 1}'></hence-user-card>
+    </div>
+
+    <h2>Product Cards</h2>
+
+    <div id="product-cards">
+      <hence-product-card query='{"id": 1}'></hence-product-card>
+    </div>
+
+    <h2>Event Cards</h2>
+
+    <div id="event-cards">
+      <hence-event-card query='{"id": 1}'></hence-event-card>
+    </div>
+  </template>
+</dom-module>

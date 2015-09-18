@@ -1,0 +1,29 @@
+{
+  "name": "hence-poc",
+  "version": "0.1.0",
+  "authors": [
+    "Sean 'Blitz' Homer <sean.homer@therefore.ca>"
+  ],
+  "description": "A proof of concept showcasing off components",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer"
+  ],
+  "main": "dist/hence-poc.html",
+  "homepage": "https://github.com/homertherefore/hence-poc/",
+  "ignore": [
+    "/.*",
+    "/comp/gulp/",
+    "/comp/test/"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.3.0",
+    "polymer": "Polymer/polymer#^1.0.0",
+    "iron-elements": "PolymerElements/iron-elements#^1.0.0",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.1"
+  },
+  "devDependencies": {
+    "web-component-tester": "*"
+  }
+}

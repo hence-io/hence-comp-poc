@@ -1,0 +1,37 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../hence-card/dist/hence-card.html">
+<link rel="import" href="../../hence-user-card/dist/hence-user-card.html">
+<link rel="import" href="../../hence-product-card/dist/hence-product-card.html">
+<link rel="import" href="../../hence-event-card/dist/hence-event-card.html">
+
+<dom-module id="hence-poc">
+  <template>
+    <h1>Card Samples</h1>
+
+    <h2>Custom Cards</h2>
+
+    <div id="custom-cards">
+      <hence-card title="Default Card" description="This is a default card sample."></hence-card>
+    </div>
+
+    <h2>User Cards</h2>
+
+    <div id="user-cards">
+      <hence-user-card query='{"id": 1}'></hence-user-card>
+    </div>
+
+    <h2>Product Cards</h2>
+
+    <div id="product-cards">
+      <hence-product-card query='{"id": 1}'></hence-product-card>
+    </div>
+
+    <h2>Event Cards</h2>
+
+    <div id="event-cards">
+      <hence-event-card query='{"id": 1}'></hence-event-card>
+    </div>
+  </template>
+<link rel="import" type="css" href="css/hence-poc.min.css">
+        <script src="js/hence-poc.min.js"></script>
+        </dom-module>
