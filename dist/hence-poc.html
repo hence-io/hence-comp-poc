@@ -8,18 +8,18 @@
   <template>
     <style>
       :host {
-        --hence-card-title-color: #f00;
-        --hence-card-cover-title-color: #0f0;
+        --hence-card-title-color: #0092ff;
+        --hence-card-cover-title-color: #3bff15;
 
-        --hence-card-details: {
-        }
+        /*--hence-card-details: {*/
+        /*}*/
       }
     </style>
     <h1>Card Samples</h1>
 
     <h2>Basic</h2>
 
-    <div id="basic-cards">
+    <div id="basicCards">
       <hence-card title="I'm Just A Title"></hence-card>
       <hence-card title="A title..."
                   description="And some content..."></hence-card>
@@ -36,10 +36,10 @@
       </hence-card>
 
     </div>
-
+    <hr>
     <h2>Featured Image</h2>
 
-    <div id="image-cards">
+    <div id="imageCards">
       <hence-card title="I'm Just A Title"
                   image="http://lorempixel.com/250/150/nature"
                   image-position="background"
@@ -65,24 +65,31 @@
       </hence-card>
 
     </div>
+    <hr>
+    <h2>Advanced</h2>
 
+    <div id="advancedCards">
+
+    </div>
+    <hr>
     <h2>User Cards</h2>
 
-    <div id="user-cards">
+    <div id="userCards">
       <hence-user-card query='{"id": 1}'></hence-user-card>
+      <hence-user-card query='{"id": 2}'></hence-user-card>
+      <hence-user-card query='{"id": 3}'></hence-user-card>
+      <hence-user-card query='{"id": 4}'></hence-user-card>
     </div>
-
+    <hr>
     <h2>Product Cards</h2>
 
-    <div id="product-cards">
+    <div id="productCards">
       <hence-product-card query='{"id": 1}'></hence-product-card>
+      <hence-product-card query='{"id": 2}'></hence-product-card>
+      <hence-product-card query='{"id": 3}'></hence-product-card>
+      <hence-product-card query='{"id": 4}'></hence-product-card>
     </div>
 
-    <h2>Event Cards</h2>
-
-    <div id="event-cards">
-      <hence-event-card query='{"id": 1}'></hence-event-card>
-    </div>
   </template>
 <link rel="import" type="css" href="css/hence-poc.min.css">
         <script src="js/hence-poc.min.js"></script>

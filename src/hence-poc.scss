@@ -53,66 +53,28 @@ Styleguide 2.1
 // Styles for the component wrapper built by shadow dom, any any component globals to apply
 :host {
   $ms-ratio: $minor-second; // define the modular-scale for this component; DO NO REMOVE, you've been warned. (¬_¬)ﾉ
+  display: block;
+  margin: 1%;
 
   > div {
     @include clearfix;
-    @include container(99%);
-    width: 100%;
+    @include container(100%);
   }
 }
 
-hence-card:nth-last-child(n+2),
-hence-card:nth-last-child(n+2) ~ hence-card {
-  margin: 10px !important;
-
-  // xs view
-  @include breakpoint(32em) {
-    @include span(1 of 1);
-  }
-
-  // tablet view
-  @include breakpoint(48em) {
-    @include span(1 of 2);
-  }
-
-  // desktop view
-  @include breakpoint(62em) {
-  }
-
-  // large desktop view
-  @include breakpoint(75em) {
-  }
+hr {
+  margin: ms(1) 0;
+  color: rgba(0, 0, 0, .5);
 }
 
 /***************************
 Typography
 
 markup:
-<span id="greeting">Greeting</span>
+<hence-card></hence-card>
+<hence-card></hence-card>
+<hence-card></hence-card>
+<hence-card></hence-card>
 
 Styleguide 1.2
 */
-
-/***************************
-Buttons
-
-markup:
-<button></button>
-
-Styleguide 1.3
-*/
-%icon-home {
-  @extend .fa;
-  @extend .fa-home;
-}
-
-hence-card {
-  .title {
-    color: $dark-red;
-  }
-
-  button {
-    color: $dark-blue;
-  }
-
-}

@@ -6,13 +6,13 @@ cd hence-card
 npm i  && bower i
 cd ..
 
-cd hence-event
-npm i  && bower i
-cd ..
-
-cd hence-event-card
-npm i  && bower i
-cd ..
+#cd hence-event
+#npm i  && bower i
+#cd ..
+#
+#cd hence-event-card
+#npm i  && bower i
+#cd ..
 
 cd hence-product
 npm i  && bower i
