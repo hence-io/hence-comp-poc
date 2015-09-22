@@ -1,8 +1,10 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="/bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
 <link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
 <link rel="import" href="/bower_components/hence-product-card/dist/hence-product-card.html">
-<link rel="import" href="/bower_components/hence-event-card/dist/hence-event-card.html">
+<!--<link rel="import" href="/bower_components/hence-event-card/dist/hence-event-card.html">-->
 
 <dom-module id="hence-poc">
   <template>
@@ -11,84 +13,89 @@
         --hence-card-title-color: #0092ff;
         --hence-card-cover-title-color: #3bff15;
 
-        /*--hence-card-details: {*/
-        /*}*/
+        --paper-tabs-selection-bar-color: blue;
+
+      --paper-tabs: {
+        background: rgba(0, 0, 0, .2);
+        margin-bottom: 3em;
+      }
+
+      /*--hence-card-details: {*/
+      /*}*/
       }
     </style>
-    <h1>Card Samples</h1>
 
-    <h2>Basic</h2>
+    <paper-tabs selected="{{selected}}">
+      <paper-tab>Basic Cards</paper-tab>
+      <paper-tab>Featured Images</paper-tab>
+      <paper-tab>Advanced Cards</paper-tab>
+      <paper-tab>User Cards</paper-tab>
+      <paper-tab>Product Cards</paper-tab>
+    </paper-tabs>
 
-    <div id="basicCards">
-      <hence-card title="I'm Just A Title"></hence-card>
-      <hence-card title="A title..."
-                  description="And some content..."></hence-card>
-      <hence-card title="A title..."
-                  subtitle="... And Subtitle"
-                  description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
-      <hence-card title="Sample with Actions"
-                  description="With some more content... With some more content... With some more content... With some more content...">
-        <div class="actions">
-          <button>Action 1</button>
-          <button>Action 2</button>
-          <button>Action 3</button>
-        </div>
-      </hence-card>
+    <iron-pages selected="{{selected}}">
+      <div id="basicCards">
+        <hence-card title="I'm Just A Title"></hence-card>
+        <hence-card title="A title..."
+                    description="And some content..."></hence-card>
+        <hence-card title="A title..."
+                    subtitle="... And Subtitle"
+                    description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
+        <hence-card title="Sample with Actions"
+                    description="With some more content... With some more content... With some more content... With some more content...">
+          <div class="actions">
+            <button>Action 1</button>
+            <button>Action 2</button>
+            <button>Action 3</button>
+          </div>
+        </hence-card>
 
-    </div>
-    <hr>
-    <h2>Featured Image</h2>
+      </div>
+      <div id="imageCards">
+        <hence-card title="I'm Just A Title"
+                    image="http://lorempixel.com/250/150/nature"
+                    image-position="background"
+          ></hence-card>
+        <hence-card title="A title..."
+                    image="http://lorempixel.com/250/150/nature"
+                    subtitle="... And Subtitle"
+                    description="And some content..."></hence-card>
+        <hence-card title="A title..."
+                    subtitle="... And Subtitle"
+                    image="http://lorempixel.com/250/150/nature"
+                    image-position="center"
+                    description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
+        <hence-card title="Sample with Actions"
+                    image="http://lorempixel.com/250/150/nature"
+                    image-position="center"
+                    description="With some more content... With some more content... With some more content... With some more content...">
+          <div class="actions">
+            <button>Action 1</button>
+            <button>Action 2</button>
+            <button>Action 3</button>
+          </div>
+        </hence-card>
 
-    <div id="imageCards">
-      <hence-card title="I'm Just A Title"
-                  image="http://lorempixel.com/250/150/nature"
-                  image-position="background"
-        ></hence-card>
-      <hence-card title="A title..."
-                  image="http://lorempixel.com/250/150/nature"
-                  subtitle="... And Subtitle"
-                  description="And some content..."></hence-card>
-      <hence-card title="A title..."
-                  subtitle="... And Subtitle"
-                  image="http://lorempixel.com/250/150/nature"
-                  image-position="center"
-                  description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
-      <hence-card title="Sample with Actions"
-                  image="http://lorempixel.com/250/150/nature"
-                  image-position="center"
-                  description="With some more content... With some more content... With some more content... With some more content...">
-        <div class="actions">
-          <button>Action 1</button>
-          <button>Action 2</button>
-          <button>Action 3</button>
-        </div>
-      </hence-card>
+      </div>
+      <div id="advancedCards">
 
-    </div>
-    <hr>
-    <h2>Advanced</h2>
+      </div>
+      <div id="userCards">
+        <hence-user-card query='{"id": 1}'></hence-user-card>
+        <hence-user-card query='{"id": 2}'></hence-user-card>
+        <hence-user-card query='{"id": 3}'></hence-user-card>
+        <hence-user-card query='{"id": 4}'></hence-user-card>
+      </div>
 
-    <div id="advancedCards">
+      <div id="productCards">
+        <hence-product-card query='{"id": 1}'></hence-product-card>
+        <hence-product-card query='{"id": 2}'></hence-product-card>
+        <hence-product-card query='{"id": 3}'></hence-product-card>
+        <hence-product-card query='{"id": 4}'></hence-product-card>
+      </div>
+    </iron-pages>
 
-    </div>
-    <hr>
-    <h2>User Cards</h2>
 
-    <div id="userCards">
-      <hence-user-card query='{"id": 1}'></hence-user-card>
-      <hence-user-card query='{"id": 2}'></hence-user-card>
-      <hence-user-card query='{"id": 3}'></hence-user-card>
-      <hence-user-card query='{"id": 4}'></hence-user-card>
-    </div>
-    <hr>
-    <h2>Product Cards</h2>
-
-    <div id="productCards">
-      <hence-product-card query='{"id": 1}'></hence-product-card>
-      <hence-product-card query='{"id": 2}'></hence-product-card>
-      <hence-product-card query='{"id": 3}'></hence-product-card>
-      <hence-product-card query='{"id": 4}'></hence-product-card>
-    </div>
-
+    <content></content>
   </template>
 </dom-module>

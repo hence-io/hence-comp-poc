@@ -21,7 +21,13 @@
     "font-awesome": "~4.3.0",
     "polymer": "Polymer/polymer#^1.0.0",
     "iron-elements": "PolymerElements/iron-elements#^1.0.0",
-    "paper-elements": "PolymerElements/paper-elements#^1.0.1"
+    "paper-elements": "PolymerElements/paper-elements#^1.0.1",
+    "hence-card": "hence-io/hence-card",
+    "hence-user": "hence-io/hence-user",
+    "hence-user-card": "hence-io/hence-user-card",
+    "hence-product": "homertherefore/hence-product",
+    "hence-product-card": "homertherefore/hence-product-card",
+    "hence-user-biography": "homertherefore/hence-user-biography"
   },
   "devDependencies": {
     "web-component-tester": "*"
