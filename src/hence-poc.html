@@ -1,5 +1,7 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
 <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
 <link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
@@ -10,8 +12,8 @@
   <template>
     <style>
       :host {
-        --hence-card-title-color: #0092ff;
-        --hence-card-cover-title-color: #3bff15;
+        /*--hence-card-title-color: #0092ff;*/
+        /*--hence-card-cover-title-color: #3bff15;*/
 
         --paper-tabs-selection-bar-color: blue;
 
@@ -25,7 +27,7 @@
       }
     </style>
 
-    <paper-tabs selected="{{selected}}">
+    <paper-tabs selected="{{selectedTab}}">
       <paper-tab>Basic Cards</paper-tab>
       <paper-tab>Featured Images</paper-tab>
       <paper-tab>Advanced Cards</paper-tab>
@@ -33,7 +35,7 @@
       <paper-tab>Product Cards</paper-tab>
     </paper-tabs>
 
-    <iron-pages selected="{{selected}}">
+    <iron-pages selected="{{selectedTab}}">
       <div id="basicCards">
         <hence-card title="I'm Just A Title"></hence-card>
         <hence-card title="A title..."

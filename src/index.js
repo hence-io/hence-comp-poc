@@ -12,5 +12,4 @@ docReady(()=> {
 
   // Spawn various states of the component to preview them side by side
   HencePoc.appendElementTo({}, target.previewBox);
-
 });
