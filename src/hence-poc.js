@@ -44,7 +44,7 @@ let HencePoc = Hence.Ui({
    */
     ready() {
     this.docs = _map(docs, f => f());
-    console.log('this.docs',this.docs);
+    //console.log('this.docs',this.docs);
   },
 
   /**
@@ -98,7 +98,7 @@ let HencePoc = Hence.Ui({
       subtitle: 'Padded example w/ actions',
       actions: [action()],
       image,
-      description: docs.advanced1()
+      source: docs.advanced1()
     }, target.advanced);
 
     HenceCard.appendElementTo({
