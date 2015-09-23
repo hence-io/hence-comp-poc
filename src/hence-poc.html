@@ -3,6 +3,8 @@
 <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="/bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
 <link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
 <link rel="import" href="/bower_components/hence-product-card/dist/hence-product-card.html">
@@ -11,10 +13,10 @@
 <dom-module id="hence-poc">
   <template>
     <style>
+      /*@formatter:off*/
       :host {
         /*--hence-card-title-color: #0092ff;*/
         /*--hence-card-cover-title-color: #3bff15;*/
-
         --paper-tabs-selection-bar-color: blue;
 
       --paper-tabs: {
@@ -24,9 +26,10 @@
 
       /*--hence-card-details: {*/
       /*}*/
+
+      /*@formatter:on*/
       }
     </style>
-
     <paper-tabs selected="{{selectedTab}}">
       <paper-tab>Basic Cards</paper-tab>
       <paper-tab>Featured Images</paper-tab>
@@ -37,14 +40,23 @@
 
     <iron-pages selected="{{selectedTab}}">
       <div id="basicCards">
-        <hence-card title="I'm Just A Title"></hence-card>
-        <hence-card title="A title..."
-                    description="And some content..."></hence-card>
+        <hence-card title="I'm Just A Title" description="{{docs.basic1}}">
+        </hence-card>
+        <hence-card title="A title..." description="{{docs.basic2}}">
+          <div class="description">And some content...</div>
+        </hence-card>
         <hence-card title="A title..."
                     subtitle="... And Subtitle"
-                    description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
+                    description="{{docs.basic3}}">
+          <div class="description">
+            With some more content... With some more content... With some more content... With some more content...
+          </div>
+        </hence-card>
         <hence-card title="Sample with Actions"
-                    description="With some more content... With some more content... With some more content... With some more content...">
+                    description="{{docs.basic4}}">
+          <div class="description">
+            With some more content... With some more content... With some more content... With some more content...
+          </div>
           <div class="actions">
             <button>Action 1</button>
             <button>Action 2</button>
