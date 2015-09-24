@@ -13,7 +13,7 @@ let generateDoc = (props, details)=> {
   icon.setAttribute('icon', 'settings');
   button.appendChild(icon);
   button.style.position = 'absolute';
-  button.style.top = '-18px';
+  button.style.top = '-7px';
   button.style.right = '-5px';
   button.style.borderRadius = '0 0 0 5px';
   button.style.zIndex = '2';
