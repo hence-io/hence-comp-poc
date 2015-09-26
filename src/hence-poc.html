@@ -1,5 +1,6 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
 <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="/bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/iron-pages/iron-pages.html">
@@ -36,6 +37,7 @@
       <paper-tab>Advanced Cards</paper-tab>
       <paper-tab>User Cards</paper-tab>
       <paper-tab>Product Cards</paper-tab>
+      <paper-tab>Use Cases Cards</paper-tab>
     </paper-tabs>
 
     <iron-pages selected="{{selectedTab}}">
@@ -106,6 +108,66 @@
         <hence-product-card query='{"id": 2}'></hence-product-card>
         <hence-product-card query='{"id": 3}'></hence-product-card>
         <hence-product-card query='{"id": 4}'></hence-product-card>
+      </div>
+
+      <div id="userCaseCards">
+        <h1>Albums</h1>
+        <hence-card
+          title="Rihanna"
+          subtitle="Latest Album From Rihanna"
+          image="http://www.bpmjunction.com/albumcovers/1av0ka5RhvxsoovoFa.jpg"
+          image-position="background"
+          avatar="http://www.bpmjunction.com/albumcovers/1av0ka5RhvxsoovoFa.jpg"
+          avatar-shape="square"
+          >
+          <div class="actions">
+            <paper-fab icon="add"></paper-fab>
+          </div>
+        </hence-card>
+
+        <hence-card
+          title="Drake"
+          subtitle="Latest Album From Drake"
+          image="http://hiphop-n-more.com/wp-content/uploads/2013/08/NWTS.jpg"
+          image-position="background"
+          avatar="http://hiphop-n-more.com/wp-content/uploads/2013/08/NWTS.jpg"
+          avatar-shape="square"
+          >
+          <div class="actions">
+            <paper-fab icon="add"></paper-fab>
+          </div>
+        </hence-card>
+        <hr style="clear:both;">
+
+        <h1>Media</h1>
+
+        <hence-card title="Shadow DOM v1 status">
+          <div class="tagLine">
+            <span>Person ABC</span>
+            <span style="float:right;">12h</span>
+          </div>
+          <div class="description">
+            Chrome: <a href="http://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/Ez2cuT0KmQo">http://groups.google.com/a/chromium.org/forum/</a> …<br>
+            Saf: <a href="https://bugs.webkit.org/show_bug.cgi?id=148695">https://bugs.webkit.org/show_bug.cgi?id=148695</a> …<br>
+            FF: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205323">https://bugzilla.mozilla.org/show_bug.cgi?id=1205323</a> …<br>
+            Edge: <a href="http://dev.modern.ie/platform/status/shadowdom">http://dev.modern.ie/platform/status/shadowdom</a> …<br>
+          </div>
+        </hence-card>
+        <hence-card
+          image="http://7-themes.com/data_images/out/59/6972175-soviet-camera-fed-5.jpg"
+          >
+          <div class="tagLine">
+            <span>Person ABC</span>
+            <span style="float:right;">12h</span>
+          </div>
+          <div class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores assumenda consequuntur deleniti dicta distinctio eius enim illum laborum natus, nostrum odio pariatur reiciendis repellat similique tempore vel. Nulla, totam.
+          </div>
+        </hence-card>
+        <hr style="clear:both;">
+
+        <h1>Flights</h1>
+
       </div>
     </iron-pages>
 
