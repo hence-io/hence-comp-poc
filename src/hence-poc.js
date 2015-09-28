@@ -23,7 +23,7 @@ let HencePoc = Hence.Ui({
   properties: {
     selectedTab: {
       type: String,
-      value: 0
+      value: 5
     },
     docs: {
       type: Object

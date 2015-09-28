@@ -96,17 +96,6 @@ let buildCards = (target)=> {
     actions: [action(false), action(false), action(false), action(false), action(false), action(false)],
     description
   }, target.advanced);
-
-
-  // Travel
-  HenceCard.appendElementTo({
-    title: 'JFK <span>Icon</span> SFO',
-    image: 'https://ampersandtravel.files.wordpress.com/2012/09/maldives-dhoni-ampersand-travel.jpg'
-  }, target.useCase);
-
-  HenceCard.appendElementTo({
-    image: 'http://actualizingself.com/wp-content/uploads/2014/02/Travel-Hacking-221.jpg'
-  }, target.useCase);
 };
 
 export default buildCards;

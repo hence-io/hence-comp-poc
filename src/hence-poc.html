@@ -8,6 +8,7 @@
 <link rel="import" href="/bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="/bower_components/iron-icons/av-icons.html">
+<link rel="import" href="/bower_components/iron-icons/device-icons.html">
 <link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
 <link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
 <link rel="import" href="/bower_components/hence-product-card/dist/hence-product-card.html">
@@ -33,6 +34,11 @@
         border-bottom: 1px solid #eee;
         display: block;
       }
+
+       .flights {
+        --iron-icon-height: 1em;
+        --iron-icon-width: 1em;
+       }
 
       /*--hence-card-details: {*/
       /*}*/
@@ -129,28 +135,63 @@
           avatar="http://www.bpmjunction.com/albumcovers/1av0ka5RhvxsoovoFa.jpg"
           avatar-shape="square"
           >
-          <div class="description" style="width: 106%; margin-left: -3%; color: #000; padding: 16px 0;">
-            <paper-fab icon="add" style="position: absolute; right: 16px; top: 274px; background: #00f;"></paper-fab>
-            <paper-item style="padding: 8px 16px; min-height: inherit; background: #00f; color: #fff;">
-              <paper-item-body>
-                <div style="font-size: 20px;">2 Tracks</div>
-              </paper-item-body>
-            </paper-item>
-            <paper-item>
-              <paper-item-body two-line>
-                <div>1. Track 1</div>
-                <div secondary>00:00</div>
-              </paper-item-body>
-              <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
-            </paper-item>
-            <paper-item>
-              <paper-item-body two-line>
-                <div>2. Track 2</div>
-                <div secondary>00:00</div>
-              </paper-item-body>
-              <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
-            </paper-item>
+          <!-- tagContent -->
+          <style>
+            .fullWidth {
+              color: #000;
+              margin-left: -3%;
+              padding: 16px 0 0;
+              width: 106%;
+            }
+
+            .callToAction {
+              background: #00f;
+              position: absolute;
+              right: 16px;
+              top: 274px;
+            }
+
+            .trackTotal {
+              background: #00f;
+              color: #fff;
+              min-height: inherit;
+              padding: 8px 16px;
+            }
+
+            .trackTotal paper-item-body {
+              font-size: 20px;
+            }
+
+            .playTrack {
+              float: right;
+              margin-top: -36px;
+            }
+          </style>
+          <div class="description" style="padding-bottom: 0;">
+            <div class="fullWidth">
+              <paper-fab icon="add" class="callToAction"></paper-fab>
+              <paper-item class="trackTotal">
+                <paper-item-body>
+                  2 Tracks
+                </paper-item-body>
+              </paper-item>
+              <paper-item>
+                <paper-item-body two-line>
+                  <div>1. Track 1</div>
+                  <div secondary>00:00</div>
+                </paper-item-body>
+                <iron-icon class="playTrack" icon="av:play-arrow"></iron-icon>
+              </paper-item>
+              <paper-item>
+                <paper-item-body two-line>
+                  <div>2. Track 2</div>
+                  <div secondary>00:00</div>
+                </paper-item-body>
+                <iron-icon class="playTrack" icon="av:play-arrow"></iron-icon>
+              </paper-item>
+            </div>
           </div>
+          <!-- /tagContent -->
         </hence-card>
 
         <hence-card
@@ -161,6 +202,7 @@
           avatar="http://hiphop-n-more.com/wp-content/uploads/2013/08/NWTS.jpg"
           avatar-shape="square"
           >
+          <!-- tagContent -->
           <div class="description" style="width: 106%; margin-left: -3%; color: #000; padding: 16px 0;">
             <paper-fab icon="add" style="position: absolute; right: 16px; top: 274px; background: #00f;"></paper-fab>
             <paper-item style="padding: 8px 16px; min-height: inherit; background: #00f; color: #fff;">
@@ -183,31 +225,38 @@
               <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
             </paper-item>
           </div>
+          <!-- /tagContent -->
         </hence-card>
         <hr style="clear:both;">
 
         <h1>Media</h1>
 
         <hence-card title="Shadow DOM v1 status">
+          <!-- tagContent -->
           <div class="tagLine">
             <span>Person ABC</span>
             <span style="float:right;">12h</span>
           </div>
           <div class="description">
-            Chrome: <a href="http://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/Ez2cuT0KmQo">http://groups.google.com/a/chromium.org/forum/</a>
+            Chrome:
+            <a href="http://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/Ez2cuT0KmQo">http://groups.google.com/a/chromium.org/forum/</a>
             …<br>
             Saf:
             <a href="https://bugs.webkit.org/show_bug.cgi?id=148695">https://bugs.webkit.org/show_bug.cgi?id=148695</a>
             …<br>
-            FF: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205323">https://bugzilla.mozilla.org/show_bug.cgi?id=1205323</a>
+            FF:
+            <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205323">https://bugzilla.mozilla.org/show_bug.cgi?id=1205323</a>
             …<br>
-            Edge: <a href="http://dev.modern.ie/platform/status/shadowdom">http://dev.modern.ie/platform/status/shadowdom</a>
+            Edge:
+            <a href="http://dev.modern.ie/platform/status/shadowdom">http://dev.modern.ie/platform/status/shadowdom</a>
             …<br>
           </div>
+          <!-- /tagContent -->
         </hence-card>
         <hence-card
           image="http://7-themes.com/data_images/out/59/6972175-soviet-camera-fed-5.jpg"
           >
+          <!-- tagContent -->
           <div class="tagLine">
             <span>Person ABC</span>
             <span style="float:right;">12h</span>
@@ -217,11 +266,142 @@
             dicta distinctio eius enim illum laborum natus, nostrum odio pariatur reiciendis repellat similique tempore
             vel. Nulla, totam.
           </div>
+          <!-- /tagContent -->
         </hence-card>
         <hr style="clear:both;">
 
         <h1>Flights</h1>
 
+        <hence-card
+          image="https://ampersandtravel.files.wordpress.com/2012/09/maldives-dhoni-ampersand-travel.jpg"
+          >
+          <!-- tagContent -->
+          <div class="overlay-title">
+            JFK
+            <iron-icon class="flights" icon="device:airplanemode-active"></iron-icon>
+            SFO
+          </div>
+          <div class="description">
+
+          </div>
+          <!-- /tagContent -->
+        </hence-card>
+        <hence-card
+          image="http://actualizingself.com/wp-content/uploads/2014/02/Travel-Hacking-221.jpg"
+          >
+          <!-- tagContent -->
+          <div class="overlay-title">
+            LON
+            <iron-icon class="flights" icon="device:airplanemode-active"></iron-icon>
+            XZY
+          </div>
+          <div class="description">
+            <style>
+              .fullWidth {
+                margin-left: -3%;
+                width: 106%;
+              }
+
+              .review {
+                background: #664d80;
+                color: #fff;
+                display: inline-block;
+                margin-top: -16px;
+                padding: 24px 16px;
+              }
+
+              .review div {
+                float: left;
+                padding: 0 3%;
+                text-align: center;
+                width: 43.5%;
+              }
+
+              .review .price {
+                font-size: 2em;
+                border-right: 1px solid #fff;
+              }
+
+              .checkIn {
+                border-bottom: 1px solid #eee;
+                color: #00f;
+                margin-bottom: 1em;
+                padding: 8px 16px;
+              }
+
+              .checkInButton {
+                background: #00f;
+                margin-top: 8px;
+                position: absolute;
+                right: 16px;
+              }
+
+              .details, .boarding {
+                padding: 16px 0;
+              }
+
+              .boarding div {
+                float: left;
+                width: 33.33%;
+              }
+
+              .boarding header {
+                color: #aaa;
+              }
+
+              .clear {
+                clear: both;
+                height: 0;
+              }
+            </style>
+            <header class="review fullWidth">
+              <div class="price">
+                $123.23
+              </div>
+              <div class="duration">
+                Flight duration<br>
+                <b>7h 10m</b>
+              </div>
+            </header>
+            <div class="clear"></div>
+            <div class="checkIn fullWidth">
+              Check In
+              <paper-fab class="checkInButton" icon="icons:check"></paper-fab>
+            </div>
+            <div class="details">
+              <div class="flightNumber">
+                US Airways Flight #22
+              </div>
+              <div class="confirmation">
+                Thu Apr 4, Confirmation #123456789
+              </div>
+            </div>
+            <div class="boarding">
+              <header>
+                <div class="airport">
+                  New York, JFK
+                </div>
+                <div class="terminal">
+                  Terminal
+                </div>
+                <div class="gate">
+                  Gate
+                </div>
+              </header>
+              <div class="airport">
+                6:05am
+              </div>
+              <div class="terminal">
+                &mdash;
+              </div>
+              <div class="gate">
+                48
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <!-- /tagContent -->
+        </hence-card>
       </div>
     </iron-pages>
 
