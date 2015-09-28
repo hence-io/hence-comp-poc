@@ -1,11 +1,13 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
 <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="/bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="/bower_components/paper-item/paper-item.html">
 <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="/bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/iron-icons/av-icons.html">
 <link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
 <link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
 <link rel="import" href="/bower_components/hence-product-card/dist/hence-product-card.html">
@@ -23,6 +25,13 @@
       --paper-tabs: {
         background: rgba(0, 0, 0, .2);
         margin-bottom: 3em;
+      }
+
+      --paper-item: {
+        background: #fff;
+        padding: 16px;
+        border-bottom: 1px solid #eee;
+        display: block;
       }
 
       /*--hence-card-details: {*/
@@ -120,8 +129,27 @@
           avatar="http://www.bpmjunction.com/albumcovers/1av0ka5RhvxsoovoFa.jpg"
           avatar-shape="square"
           >
-          <div class="actions">
-            <paper-fab icon="add"></paper-fab>
+          <div class="description" style="width: 106%; margin-left: -3%; color: #000; padding: 16px 0;">
+            <paper-fab icon="add" style="position: absolute; right: 16px; top: 274px; background: #00f;"></paper-fab>
+            <paper-item style="padding: 8px 16px; min-height: inherit; background: #00f; color: #fff;">
+              <paper-item-body>
+                <div style="font-size: 20px;">2 Tracks</div>
+              </paper-item-body>
+            </paper-item>
+            <paper-item>
+              <paper-item-body two-line>
+                <div>1. Track 1</div>
+                <div secondary>00:00</div>
+              </paper-item-body>
+              <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
+            </paper-item>
+            <paper-item>
+              <paper-item-body two-line>
+                <div>2. Track 2</div>
+                <div secondary>00:00</div>
+              </paper-item-body>
+              <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
+            </paper-item>
           </div>
         </hence-card>
 
@@ -133,8 +161,27 @@
           avatar="http://hiphop-n-more.com/wp-content/uploads/2013/08/NWTS.jpg"
           avatar-shape="square"
           >
-          <div class="actions">
-            <paper-fab icon="add"></paper-fab>
+          <div class="description" style="width: 106%; margin-left: -3%; color: #000; padding: 16px 0;">
+            <paper-fab icon="add" style="position: absolute; right: 16px; top: 274px; background: #00f;"></paper-fab>
+            <paper-item style="padding: 8px 16px; min-height: inherit; background: #00f; color: #fff;">
+              <paper-item-body>
+                <div style="font-size: 20px;">2 Tracks</div>
+              </paper-item-body>
+            </paper-item>
+            <paper-item>
+              <paper-item-body two-line>
+                <div>1. Track 1</div>
+                <div secondary>00:00</div>
+              </paper-item-body>
+              <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
+            </paper-item>
+            <paper-item>
+              <paper-item-body two-line>
+                <div>2. Track 2</div>
+                <div secondary>00:00</div>
+              </paper-item-body>
+              <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
+            </paper-item>
           </div>
         </hence-card>
         <hr style="clear:both;">
@@ -147,10 +194,15 @@
             <span style="float:right;">12h</span>
           </div>
           <div class="description">
-            Chrome: <a href="http://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/Ez2cuT0KmQo">http://groups.google.com/a/chromium.org/forum/</a> …<br>
-            Saf: <a href="https://bugs.webkit.org/show_bug.cgi?id=148695">https://bugs.webkit.org/show_bug.cgi?id=148695</a> …<br>
-            FF: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205323">https://bugzilla.mozilla.org/show_bug.cgi?id=1205323</a> …<br>
-            Edge: <a href="http://dev.modern.ie/platform/status/shadowdom">http://dev.modern.ie/platform/status/shadowdom</a> …<br>
+            Chrome: <a href="http://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/Ez2cuT0KmQo">http://groups.google.com/a/chromium.org/forum/</a>
+            …<br>
+            Saf:
+            <a href="https://bugs.webkit.org/show_bug.cgi?id=148695">https://bugs.webkit.org/show_bug.cgi?id=148695</a>
+            …<br>
+            FF: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1205323">https://bugzilla.mozilla.org/show_bug.cgi?id=1205323</a>
+            …<br>
+            Edge: <a href="http://dev.modern.ie/platform/status/shadowdom">http://dev.modern.ie/platform/status/shadowdom</a>
+            …<br>
           </div>
         </hence-card>
         <hence-card
@@ -161,7 +213,9 @@
             <span style="float:right;">12h</span>
           </div>
           <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores assumenda consequuntur deleniti dicta distinctio eius enim illum laborum natus, nostrum odio pariatur reiciendis repellat similique tempore vel. Nulla, totam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores assumenda consequuntur deleniti
+            dicta distinctio eius enim illum laborum natus, nostrum odio pariatur reiciendis repellat similique tempore
+            vel. Nulla, totam.
           </div>
         </hence-card>
         <hr style="clear:both;">
