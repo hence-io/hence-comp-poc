@@ -27,7 +27,8 @@
     "hence-user-card": "hence-io/hence-user-card",
     "hence-product": "homertherefore/hence-product",
     "hence-product-card": "homertherefore/hence-product-card",
-    "hence-user-biography": "homertherefore/hence-user-biography"
+    "hence-user-biography": "homertherefore/hence-user-biography",
+    "hence-poc": "homertherefore/hence-album-tracklist"
   },
   "devDependencies": {
     "web-component-tester": "*"

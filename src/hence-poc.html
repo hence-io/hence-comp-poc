@@ -10,6 +10,7 @@
 <link rel="import" href="/bower_components/iron-icons/av-icons.html">
 <link rel="import" href="/bower_components/iron-icons/device-icons.html">
 <link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
+<link rel="import" href="/bower_components/hence-album-tracklist/dist/hence-album-tracklist.html">
 <link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
 <link rel="import" href="/bower_components/hence-product-card/dist/hence-product-card.html">
 <!--<link rel="import" href="/bower_components/hence-event-card/dist/hence-event-card.html">-->
@@ -127,106 +128,20 @@
 
       <div id="userCaseCards">
         <h1>Albums</h1>
-        <hence-card
+        <hence-album-tracklist
           title="Rihanna"
           subtitle="Latest Album From Rihanna"
           image="http://www.bpmjunction.com/albumcovers/1av0ka5RhvxsoovoFa.jpg"
-          image-position="background"
-          avatar="http://www.bpmjunction.com/albumcovers/1av0ka5RhvxsoovoFa.jpg"
-          avatar-shape="square"
+          total-tracks="2"
           >
-          <!-- tagContent -->
-          <style>
-            .fullWidth {
-              color: #000;
-              margin-left: -3%;
-              padding: 16px 0 0;
-              width: 106%;
-            }
-
-            .callToAction {
-              background: #00f;
-              position: absolute;
-              right: 16px;
-              top: 274px;
-            }
-
-            .trackTotal {
-              background: #00f;
-              color: #fff;
-              min-height: inherit;
-              padding: 8px 16px;
-            }
-
-            .trackTotal paper-item-body {
-              font-size: 20px;
-            }
-
-            .playTrack {
-              float: right;
-              margin-top: -36px;
-            }
-          </style>
-          <div class="description" style="padding-bottom: 0;">
-            <div class="fullWidth">
-              <paper-fab icon="add" class="callToAction"></paper-fab>
-              <paper-item class="trackTotal">
-                <paper-item-body>
-                  2 Tracks
-                </paper-item-body>
-              </paper-item>
-              <paper-item>
-                <paper-item-body two-line>
-                  <div>1. Track 1</div>
-                  <div secondary>00:00</div>
-                </paper-item-body>
-                <iron-icon class="playTrack" icon="av:play-arrow"></iron-icon>
-              </paper-item>
-              <paper-item>
-                <paper-item-body two-line>
-                  <div>2. Track 2</div>
-                  <div secondary>00:00</div>
-                </paper-item-body>
-                <iron-icon class="playTrack" icon="av:play-arrow"></iron-icon>
-              </paper-item>
-            </div>
-          </div>
-          <!-- /tagContent -->
-        </hence-card>
-
-        <hence-card
+        </hence-album-tracklist>
+        <hence-album-tracklist
           title="Drake"
           subtitle="Latest Album From Drake"
           image="http://hiphop-n-more.com/wp-content/uploads/2013/08/NWTS.jpg"
-          image-position="background"
-          avatar="http://hiphop-n-more.com/wp-content/uploads/2013/08/NWTS.jpg"
-          avatar-shape="square"
+          total-tracks="2"
           >
-          <!-- tagContent -->
-          <div class="description" style="width: 106%; margin-left: -3%; color: #000; padding: 16px 0;">
-            <paper-fab icon="add" style="position: absolute; right: 16px; top: 274px; background: #00f;"></paper-fab>
-            <paper-item style="padding: 8px 16px; min-height: inherit; background: #00f; color: #fff;">
-              <paper-item-body>
-                <div style="font-size: 20px;">2 Tracks</div>
-              </paper-item-body>
-            </paper-item>
-            <paper-item>
-              <paper-item-body two-line>
-                <div>1. Track 1</div>
-                <div secondary>00:00</div>
-              </paper-item-body>
-              <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
-            </paper-item>
-            <paper-item>
-              <paper-item-body two-line>
-                <div>2. Track 2</div>
-                <div secondary>00:00</div>
-              </paper-item-body>
-              <iron-icon icon="av:play-arrow" style="float: right; margin-top: -36px;"></iron-icon>
-            </paper-item>
-          </div>
-          <!-- /tagContent -->
-        </hence-card>
+        </hence-album-tracklist>
         <hr style="clear:both;">
 
         <h1>Media</h1>
