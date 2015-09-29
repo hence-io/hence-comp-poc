@@ -11,6 +11,7 @@
 <link rel="import" href="/bower_components/iron-icons/device-icons.html">
 <link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
 <link rel="import" href="/bower_components/hence-album-tracklist/dist/hence-album-tracklist.html">
+<link rel="import" href="/bower_components/hence-flight-checkin/dist/hence-flight-checkin.html">
 <link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
 <link rel="import" href="/bower_components/hence-product-card/dist/hence-product-card.html">
 <!--<link rel="import" href="/bower_components/hence-event-card/dist/hence-event-card.html">-->
@@ -81,7 +82,6 @@
             <button>Action 3</button>
           </div>
         </hence-card>
-
       </div>
       <div id="imageCards">
         <hence-card title="I'm Just A Title"
@@ -187,136 +187,32 @@
 
         <h1>Flights</h1>
 
-        <hence-card
-          image="https://ampersandtravel.files.wordpress.com/2012/09/maldives-dhoni-ampersand-travel.jpg"
-          >
-          <!-- tagContent -->
-          <div class="overlay-title">
-            JFK
-            <iron-icon class="flights" icon="device:airplanemode-active"></iron-icon>
-            SFO
-          </div>
-          <div class="description">
-
-          </div>
-          <!-- /tagContent -->
-        </hence-card>
-        <hence-card
+        <hence-flight-checkin
           image="http://actualizingself.com/wp-content/uploads/2014/02/Travel-Hacking-221.jpg"
-          >
-          <!-- tagContent -->
-          <div class="overlay-title">
-            LON
-            <iron-icon class="flights" icon="device:airplanemode-active"></iron-icon>
-            XZY
-          </div>
-          <div class="description">
-            <style>
-              .fullWidth {
-                margin-left: -3%;
-                width: 106%;
-              }
-
-              .review {
-                background: #664d80;
-                color: #fff;
-                display: inline-block;
-                margin-top: -16px;
-                padding: 24px 16px;
-              }
-
-              .review div {
-                float: left;
-                padding: 0 3%;
-                text-align: center;
-                width: 43.5%;
-              }
-
-              .review .price {
-                font-size: 2em;
-                border-right: 1px solid #fff;
-              }
-
-              .checkIn {
-                border-bottom: 1px solid #eee;
-                color: #00f;
-                margin-bottom: 1em;
-                padding: 8px 16px;
-              }
-
-              .checkInButton {
-                background: #00f;
-                margin-top: 8px;
-                position: absolute;
-                right: 16px;
-              }
-
-              .details, .boarding {
-                padding: 16px 0;
-              }
-
-              .boarding div {
-                float: left;
-                width: 33.33%;
-              }
-
-              .boarding header {
-                color: #aaa;
-              }
-
-              .clear {
-                clear: both;
-                height: 0;
-              }
-            </style>
-            <header class="review fullWidth">
-              <div class="price">
-                $123.23
-              </div>
-              <div class="duration">
-                Flight duration<br>
-                <b>7h 10m</b>
-              </div>
-            </header>
-            <div class="clear"></div>
-            <div class="checkIn fullWidth">
-              Check In
-              <paper-fab class="checkInButton" icon="icons:check"></paper-fab>
-            </div>
-            <div class="details">
-              <div class="flightNumber">
-                US Airways Flight #22
-              </div>
-              <div class="confirmation">
-                Thu Apr 4, Confirmation #123456789
-              </div>
-            </div>
-            <div class="boarding">
-              <header>
-                <div class="airport">
-                  New York, JFK
-                </div>
-                <div class="terminal">
-                  Terminal
-                </div>
-                <div class="gate">
-                  Gate
-                </div>
-              </header>
-              <div class="airport">
-                6:05am
-              </div>
-              <div class="terminal">
-                &mdash;
-              </div>
-              <div class="gate">
-                48
-              </div>
-            </div>
-            <div class="clear"></div>
-          </div>
-          <!-- /tagContent -->
-        </hence-card>
+          departure-code="JFK"
+          arrival-code="SFO"
+          price="125.12"
+          duration="7h 10m"
+          flight-number="US Airlines Flight #22"
+          confirmation-date="Thu, Apr 4"
+          confirmation-number="423435121212"
+          boarding-city="New York"
+          boarding-time="6:05am"
+          boarding-gate="48"
+          ></hence-flight-checkin>
+        <hence-flight-checkin
+          image="https://ampersandtravel.files.wordpress.com/2012/09/maldives-dhoni-ampersand-travel.jpg"
+          departure-code="LON"
+          arrival-code="XYZ"
+          price="312.12"
+          duration="5h 35m"
+          flight-number="Air Canada Flight #42"
+          confirmation-date="Fri, Aug 4"
+          confirmation-number="13459874554"
+          boarding-city="London"
+          boarding-time="9:20am"
+          boarding-gate="5"
+          ></hence-flight-checkin>
       </div>
     </iron-pages>
 

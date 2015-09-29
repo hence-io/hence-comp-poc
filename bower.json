@@ -23,12 +23,11 @@
     "iron-elements": "PolymerElements/iron-elements#^1.0.0",
     "paper-elements": "PolymerElements/paper-elements#^1.0.1",
     "hence-card": "hence-io/hence-card",
-    "hence-user": "hence-io/hence-user",
     "hence-user-card": "hence-io/hence-user-card",
-    "hence-product": "homertherefore/hence-product",
     "hence-product-card": "homertherefore/hence-product-card",
     "hence-user-biography": "homertherefore/hence-user-biography",
-    "hence-poc": "homertherefore/hence-album-tracklist"
+    "hence-album-tracklist": "homertherefore/hence-album-tracklist",
+    "hence-flight-checkin": "homertherefore/hence-flight-checkin"
   },
   "devDependencies": {
     "web-component-tester": "*"
