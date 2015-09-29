@@ -20,14 +20,19 @@
   "dependencies": {
     "font-awesome": "~4.3.0",
     "polymer": "Polymer/polymer#^1.0.0",
-    "iron-elements": "PolymerElements/iron-elements#^1.0.0",
-    "paper-elements": "PolymerElements/paper-elements#^1.0.1",
     "hence-card": "hence-io/hence-card",
     "hence-user-card": "hence-io/hence-user-card",
     "hence-product-card": "homertherefore/hence-product-card",
     "hence-user-biography": "homertherefore/hence-user-biography",
     "hence-album-tracklist": "homertherefore/hence-album-tracklist",
-    "hence-flight-checkin": "homertherefore/hence-flight-checkin"
+    "hence-flight-checkin": "homertherefore/hence-flight-checkin",
+    "paper-tabs": "PolymerElements/paper-tabs#~1.0.3",
+    "paper-dialog": "PolymerElements/paper-dialog#~1.0.2",
+    "paper-button": "PolymerElements/paper-button#~1.0.7",
+    "iron-icon": "PolymerElements/iron-icon#~1.0.4",
+    "iron-icons": "PolymerElements/iron-icons#~1.0.4",
+    "iron-doc-viewer": "PolymerElements/iron-doc-viewer#~1.0.6",
+    "iron-pages": "PolymerElements/iron-pages#~1.0.3"
   },
   "devDependencies": {
     "web-component-tester": "*"
