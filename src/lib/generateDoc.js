@@ -29,8 +29,12 @@ let generateDoc = (props, details)=> {
 
   dialog.id = 'doc';
   dialog.setAttribute('modal', 'true');
-  dialog.style.minWidth = '600px';
-  dialog.style.minHeight = '600px';
+  //dialog.style.minWidth = '900px';
+  dialog.style.maxWidth = '900px';
+  //dialog.style.minHeight = '600px';
+  dialog.style.maxHeight = '700px';
+  //dialog.style.Height = '600px';
+  dialog.style.overflow = 'scroll';
 
   let docProps = _values(_pick(properties, props));
 

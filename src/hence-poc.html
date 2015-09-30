@@ -1,18 +1,22 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
-<link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
-<link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
-<link rel="import" href="/bower_components/paper-button/paper-button.html">
-<link rel="import" href="/bower_components/iron-pages/iron-pages.html">
+
 <link rel="import" href="/bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="/bower_components/iron-icons/av-icons.html">
 <link rel="import" href="/bower_components/iron-icons/device-icons.html">
+<link rel="import" href="/bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="/bower_components/iron-doc-viewer/iron-doc-viewer.html">
+
+<link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+
 <link rel="import" href="/bower_components/hence-card/dist/hence-card.html">
-<link rel="import" href="/bower_components/hence-album-tracklist/dist/hence-album-tracklist.html">
-<link rel="import" href="/bower_components/hence-flight-checkin/dist/hence-flight-checkin.html">
 <link rel="import" href="/bower_components/hence-user-card/dist/hence-user-card.html">
 <link rel="import" href="/bower_components/hence-product-card/dist/hence-product-card.html">
-<!--<link rel="import" href="/bower_components/hence-event-card/dist/hence-event-card.html">-->
+<link rel="import" href="/bower_components/hence-flight-checkin/dist/hence-flight-checkin.html">
+<link rel="import" href="/bower_components/hence-album-tracklist/dist/hence-album-tracklist.html">
+
 
 <dom-module id="hence-poc">
   <template>
@@ -69,8 +73,10 @@
             With some more content... With some more content... With some more content... With some more content...
           </div>
         </hence-card>
-        <hence-card title="Sample with Actions"
-                    source="{{docs.basic4}}">
+        <hence-card
+          title="Sample with Actions"
+          source="{{docs.basic4}}"
+          >
           <div class="description">
             With some more content... With some more content... With some more content... With some more content...
           </div>
@@ -82,23 +88,34 @@
         </hence-card>
       </div>
       <div id="imageCards">
-        <hence-card title="I'm Just A Title"
-                    image="http://lorempixel.com/250/150/nature"
-                    image-position="background"
+        <hence-card
+          title="I'm Just A Title"
+          image="http://lorempixel.com/250/150/nature"
+          image-position="background"
+          source="{{docs.image1}}"
           ></hence-card>
-        <hence-card title="A title..."
-                    image="http://lorempixel.com/250/150/nature"
-                    subtitle="... And Subtitle"
-                    description="And some content..."></hence-card>
-        <hence-card title="A title..."
-                    subtitle="... And Subtitle"
-                    image="http://lorempixel.com/250/150/nature"
-                    image-position="center"
-                    description="With some more content... With some more content... With some more content... With some more content..."></hence-card>
-        <hence-card title="Sample with Actions"
-                    image="http://lorempixel.com/250/150/nature"
-                    image-position="center"
-                    description="With some more content... With some more content... With some more content... With some more content...">
+        <hence-card
+          title="A title..."
+          image="http://lorempixel.com/250/150/nature"
+          subtitle="... And Subtitle"
+          description="And some content..."
+          source="{{docs.image2}}"
+          ></hence-card>
+        <hence-card
+          title="A title..."
+          subtitle="... And Subtitle"
+          image="http://lorempixel.com/250/150/nature"
+          image-position="center"
+          description="With some more content... With some more content... With some more content... With some more content..."
+          source="{{docs.image3}}"
+          ></hence-card>
+        <hence-card
+          title="Sample with Actions"
+          image="http://lorempixel.com/250/150/nature"
+          image-position="center"
+          description="With some more content... With some more content... With some more content... With some more content..."
+          source="{{docs.image4}}"
+          >
           <div class="actions">
             <button>Action 1</button>
             <button>Action 2</button>
