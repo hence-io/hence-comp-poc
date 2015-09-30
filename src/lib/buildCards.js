@@ -48,18 +48,20 @@ let buildCards = (target)=> {
     actions: [action(false), action(false)],
     image,
     imagePosition: 'center',
-    description
+    description,
+    source: docs.advanced2()
   }, target.advanced);
 
   HenceCard.appendElementTo({
     title: 'Example w/ actions & avatar',
-    subtitle: 'Example w/ actions',
+    subtitle: 'Example w/ actions & avatar',
     actions: [action(), action(), action()],
-    actionsCentered: true,
+    actionsPosition: 'center',
+    description,
     image,
     avatar,
-    description,
-    avatarShape: _sample(['square', 'circle'])
+    avatarShape: _sample(['square', 'circle']),
+    source: docs.advanced3()
   }, target.advanced);
 
   HenceCard.appendElementTo({
@@ -69,32 +71,55 @@ let buildCards = (target)=> {
     image,
     avatar,
     avatarPosition: 'center',
-    avatarShape: _sample(['square', 'circle'])
+    avatarShape: _sample(['square', 'circle']),
+    source: docs.advanced4()
   }, target.advanced);
 
   HenceCard.appendElementTo({
-    title: 'Example w/ actions pre-opened, background image',
-    image,
-    imagePosition: 'background',
+    title: 'Example w/ actions, background image',
     actions: [action(), action(), action()],
     actionsPosition: 'center',
-    description
+    description,
+    image,
+    imagePosition: 'background',
+    source: docs.advanced5()
   }, target.advanced);
 
   HenceCard.appendElementTo({
-    title: 'Example w/ actions pre-opened, background image',
+    title: 'Example w/ actions, background image',
+    actions: [action(), action(), action()],
+    description,
     image,
     imagePosition: 'background',
     avatar,
     avatarShape: _sample(['square', 'circle']),
-    actions: [action(), action(), action()],
-    description
+    source: docs.advanced6()
   }, target.advanced);
 
   HenceCard.appendElementTo({
     title: 'Icon Filled Actions',
-    actions: [action(false), action(false), action(false), action(false), action(false), action(false)],
-    description
+    actions: [
+      {
+        icon: 'home', // font awesome icon short code
+        action: (model, e)=> {
+          alert('Action activated!');
+        }
+      }, {
+        icon: 'facebook', // font awesome icon short code
+        float: 'right',
+        action: (model, e)=> {
+          alert('Action activated!');
+        }
+      }, {
+        icon: 'twitter', // font awesome icon short code
+        float: 'right',
+        action: (model, e)=> {
+          alert('Action activated!');
+        }
+      }
+    ],
+    description,
+    source: docs.advanced7()
   }, target.advanced);
 };
 
