@@ -17,15 +17,8 @@ let buildCards = (target)=> {
   let description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur assumenda commodi' +
     ' cumque dolorem eaque eligendi id illum magnam nemo neque praesentium quam quas, saepe sequi soluta, tempore totam, voluptate?';
 
-  let action = (label = true)=> {
-    return {
-      label: label ? fake.commerce.product() : '',
-      icon: _sample(['apple', 'android', 'facebook', 'google', 'github', 'linux', 'rebel', 'steam', 'windows', '']),
-      float: _sample(['', 'left', 'right']),
-      action: (model, e)=> {
-        alert('Action activated!');
-      }
-    };
+  let action = (model, e)=> {
+    alert('Action activated!');
   };
 
   let image = 'http://lorempixel.com/250/150/nature';
@@ -35,9 +28,14 @@ let buildCards = (target)=> {
 
   HenceCard.appendElementTo({
     padded: true,
-    title: 'Padded example w/ actions',
-    subtitle: 'Padded example w/ actions',
-    actions: [action()],
+    title: 'Padded example w/ action',
+    subtitle: 'Padded example w/ action',
+    actions: [
+      {
+        label: 'Learn More',
+        action
+      }
+    ],
     image,
     source: docs.advanced1()
   }, target.advanced);
@@ -45,7 +43,20 @@ let buildCards = (target)=> {
   HenceCard.appendElementTo({
     title: 'Example w/ actions, middle image',
     subtitle: 'Example w/ actions, middle image',
-    actions: [action(false), action(false)],
+    actions: [
+      {
+        label: 'Learn More',
+        action
+      }, {
+        icon: 'share-square-o',
+        float: 'right',
+        action
+      }, {
+        icon: 'plus-square-o',
+        float: 'right',
+        action
+      }
+    ],
     image,
     imagePosition: 'center',
     description,
@@ -55,29 +66,67 @@ let buildCards = (target)=> {
   HenceCard.appendElementTo({
     title: 'Example w/ actions & avatar',
     subtitle: 'Example w/ actions & avatar',
-    actions: [action(), action(), action()],
+    actions: [
+      {
+        label: 'Learn More',
+        action
+      }, {
+        icon: 'share-square-o',
+        float: 'right',
+        action
+      }, {
+        icon: 'plus-square-o',
+        float: 'right',
+        action
+      }
+    ],
     actionsPosition: 'center',
     description,
     image,
     avatar,
-    avatarShape: _sample(['square', 'circle']),
+    avatarShape: 'square',
     source: docs.advanced3()
   }, target.advanced);
 
   HenceCard.appendElementTo({
     title: 'Example w/ actions & avatar centered',
     subtitle: 'Example w/ actions',
-    actions: [action(), action(), action()],
+    actions: [
+      {
+        label: 'Learn More',
+        action
+      }, {
+        icon: 'share-square-o',
+        float: 'right',
+        action
+      }, {
+        icon: 'plus-square-o',
+        float: 'right',
+        action
+      }
+    ],
     image,
     avatar,
     avatarPosition: 'center',
-    avatarShape: _sample(['square', 'circle']),
     source: docs.advanced4()
   }, target.advanced);
 
   HenceCard.appendElementTo({
     title: 'Example w/ actions, background image',
-    actions: [action(), action(), action()],
+    actions: [
+      {
+        label: 'Learn More',
+        action
+      }, {
+        icon: 'share-square-o',
+        float: 'right',
+        action
+      }, {
+        icon: 'plus-square-o',
+        float: 'right',
+        action
+      }
+    ],
     actionsPosition: 'center',
     description,
     image,
@@ -87,7 +136,20 @@ let buildCards = (target)=> {
 
   HenceCard.appendElementTo({
     title: 'Example w/ actions, background image',
-    actions: [action(), action(), action()],
+    actions: [
+      {
+        label: 'Learn More',
+        action
+      }, {
+        icon: 'share-square-o',
+        float: 'right',
+        action
+      }, {
+        icon: 'plus-square-o',
+        float: 'right',
+        action
+      }
+    ],
     description,
     image,
     imagePosition: 'background',
@@ -97,25 +159,30 @@ let buildCards = (target)=> {
   }, target.advanced);
 
   HenceCard.appendElementTo({
-    title: 'Icon Filled Actions',
+    title: 'Icon filled actions, no label',
     actions: [
       {
-        icon: 'home', // font awesome icon short code
-        action: (model, e)=> {
-          alert('Action activated!');
-        }
+        icon: 'home',
+        action
       }, {
-        icon: 'facebook', // font awesome icon short code
-        float: 'right',
-        action: (model, e)=> {
-          alert('Action activated!');
-        }
+        icon: 'search',
+        action
       }, {
-        icon: 'twitter', // font awesome icon short code
+        icon: 'google-plus',
         float: 'right',
-        action: (model, e)=> {
-          alert('Action activated!');
-        }
+        action
+      }, {
+        icon: 'facebook',
+        float: 'right',
+        action
+      }, {
+        icon: 'twitter',
+        float: 'right',
+        action
+      }, {
+        icon: 'pinterest',
+        float: 'right',
+        action
       }
     ],
     description,

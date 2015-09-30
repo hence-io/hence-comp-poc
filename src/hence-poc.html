@@ -27,32 +27,23 @@
         /*--hence-card-cover-title-color: #3bff15;*/
         --paper-tabs-selection-bar-color: blue;
 
-      --paper-tabs: {
-        background: rgba(0, 0, 0, .2);
-        margin-bottom: 3em;
-      }
+        --paper-tabs: {
+          background: rgba(0, 0, 0, .2);
+          margin-bottom: 3em;
+        }
 
-      --paper-item: {
-        background: #fff;
-        padding: 16px;
-        border-bottom: 1px solid #eee;
-        display: block;
-      }
+        --paper-item: {
+          background: #fff;
+          padding: 16px;
+          border-bottom: 1px solid #eee;
+          display: block;
+        }
 
-       .flights {
-        --iron-icon-height: 1em;
-        --iron-icon-width: 1em;
-       }
-
-       hr {
+        hr {
          clear: both;
-       }
-
-      /*--hence-card-details: {*/
-      /*}*/
-
-      /*@formatter:on*/
+        }
       }
+      /*@formatter:on*/
     </style>
     <paper-tabs selected="{{selectedTab}}">
       <paper-tab>Basic Cards</paper-tab>
@@ -80,7 +71,7 @@
         <hence-card
           title="Sample with Actions"
           source="{{docs.basic4}}"
-          >
+        >
           <div class="description">
             With some more content... With some more content... With some more content... With some more content...
           </div>
@@ -97,14 +88,14 @@
           image="http://lorempixel.com/250/150/nature"
           image-position="background"
           source="{{docs.image1}}"
-          ></hence-card>
+        ></hence-card>
         <hence-card
           title="A title..."
           image="http://lorempixel.com/250/150/nature"
           subtitle="... And Subtitle"
           description="And some content..."
           source="{{docs.image2}}"
-          ></hence-card>
+        ></hence-card>
         <hence-card
           title="A title..."
           subtitle="... And Subtitle"
@@ -112,14 +103,14 @@
           image-position="center"
           description="With some more content... With some more content... With some more content... With some more content..."
           source="{{docs.image3}}"
-          ></hence-card>
+        ></hence-card>
         <hence-card
           title="Sample with Actions"
           image="http://lorempixel.com/250/150/nature"
           image-position="center"
           description="With some more content... With some more content... With some more content... With some more content..."
           source="{{docs.image4}}"
-          >
+        >
           <div class="actions">
             <button>Action 1</button>
             <button>Action 2</button>
@@ -152,14 +143,14 @@
           subtitle="Latest Album From Rihanna"
           image="http://www.bpmjunction.com/albumcovers/1av0ka5RhvxsoovoFa.jpg"
           total-tracks="2"
-          >
+        >
         </hence-album-tracklist>
         <hence-album-tracklist
           title="Drake"
           subtitle="Latest Album From Drake"
           image="http://hiphop-n-more.com/wp-content/uploads/2013/08/NWTS.jpg"
           total-tracks="2"
-          >
+        >
         </hence-album-tracklist>
         <hr>
 
@@ -189,7 +180,7 @@
         </hence-card>
         <hence-card
           image="http://7-themes.com/data_images/out/59/6972175-soviet-camera-fed-5.jpg"
-          >
+        >
           <!-- tagContent -->
           <div class="tagLine">
             <span>Person ABC</span>
@@ -218,7 +209,7 @@
           boarding-city="New York"
           boarding-time="6:05am"
           boarding-gate="48"
-          ></hence-flight-checkin>
+        ></hence-flight-checkin>
         <hence-flight-checkin
           image="https://ampersandtravel.files.wordpress.com/2012/09/maldives-dhoni-ampersand-travel.jpg"
           departure-code="LON"
@@ -231,7 +222,7 @@
           boarding-city="London"
           boarding-time="9:20am"
           boarding-gate="5"
-          ></hence-flight-checkin>
+        ></hence-flight-checkin>
       </div>
     </iron-pages>
 

@@ -43,7 +43,7 @@ let HencePoc = Hence.Ui({
    * ready, but parents are not. This is the point where you should make modifications to the DOM (when  necessary),
    * or kick off any processes the element wants to perform.
    */
-    ready() {
+  ready() {
     this.docs = _map(docs, f => f());
     //console.log('this.docs',this.docs);
   },
@@ -53,7 +53,7 @@ let HencePoc = Hence.Ui({
    * perform any work related to your element's visual state or active behavior (measuring sizes, beginning animations,
    * loading resources, etc).
    */
-    attached() {
+  attached() {
     this.async(this._buildCards);
   },
 
@@ -61,7 +61,7 @@ let HencePoc = Hence.Ui({
    * Element Behaviour
    ********************************************************************************************************************/
 
-    _buildCards() {
+  _buildCards() {
     let {$, $$} = this;
 
     let target = {
